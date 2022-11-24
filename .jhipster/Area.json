@@ -1,0 +1,50 @@
+{
+  "name": "Area",
+  "fields": [
+    {
+      "fieldName": "areaCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "areaName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "regionCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "CommonStatus",
+      "fieldValues": "ACTIVE,INACTIVE"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20220106070427",
+  "entityTableName": "area",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

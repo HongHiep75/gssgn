@@ -1,0 +1,26 @@
+
+entity Area {
+	id String,
+    areaCode String,
+    areaName String,
+    regionCode String,
+    status CommonStatus,
+    createdDate Instant
+    createdBy String,
+    updatedDate Instant
+    updatedBy String
+}
+
+enum CommonStatus {
+    ACTIVE, INACTIVE
+}
+
+// Set pagination options
+paginate * with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service * with serviceClass
+

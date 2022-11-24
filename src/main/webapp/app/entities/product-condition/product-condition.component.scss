@@ -1,0 +1,38 @@
+@import "src/main/webapp/app/entities/resolution/resolution.component";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+.dis-a{
+  pointer-events: none!important;
+  cursor: default!important;
+  color: #868686!important;
+}
+.ng-invalid:not(form) {
+  border-left: 1px solid #ced4da!important;
+}
+.toart-cus{
+  position: fixed;
+  background: #21b321;
+  width: 260px;
+  left: 40%;
+  top: 10%;
+  height: 2em;
+  z-index: 100000 !important;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.toart-close {
+  position: fixed;
+  background: #21b321;
+  width: 300px;
+  left: 40%;
+  height: 2.2em;
+  z-index: 100000 !important;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

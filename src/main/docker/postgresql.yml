@@ -1,0 +1,12 @@
+version: '2.12.2'
+services:
+  gssgn-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/gssgn/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=itsol
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432

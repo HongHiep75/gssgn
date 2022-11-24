@@ -1,0 +1,9 @@
+{
+  "gssgnApp": {
+    "CommonStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "INACTIVE": "INACTIVE"
+    }
+  }
+}

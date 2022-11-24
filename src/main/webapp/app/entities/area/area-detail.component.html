@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="area">
+            <h2><span jhiTranslate="gssgnApp.area.detail.title">Area</span> {{ area.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gssgnApp.area.areaCode">Area Code</span></dt>
+                <dd>
+                    <span>{{ area.areaCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.areaName">Area Name</span></dt>
+                <dd>
+                    <span>{{ area.areaName }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.regionCode">Region Code</span></dt>
+                <dd>
+                    <span>{{ area.regionCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'gssgnApp.CommonStatus.' + area.status }}">{{ area.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{ area.createdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ area.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.updatedDate">Updated Date</span></dt>
+                <dd>
+                    <span>{{ area.updatedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="gssgnApp.area.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ area.updatedBy }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/area', area.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

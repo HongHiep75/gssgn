@@ -1,0 +1,442 @@
+<div *ngIf="loading">
+    <div class="loader" >
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toart-cus" *ngIf="success">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle-fill mr-2" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg> Cập nhật thành công!</div>
+
+<div (click)="danger = false" *ngIf="danger" class="toart-close" style="background-color: red" >
+    <div class="pt-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle-fill mr-1" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+    </svg> Cập nhật không thành công!</div>
+</div>
+
+<div *ngIf="messErr" (click)="messErr = null" class="toart-close" style="background-color: red">
+    <div class="pt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+             class="bi bi-x-circle-fill mr-1" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+        </svg>
+        {{messErr}}
+    </div>
+</div>
+
+<div *ngIf="waringErr" (click)="waringErr = null" class="toart-close" style="background-color: #ff9900">
+    <div class="pt-2 pb-1" style="background-color: #ff9900">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+             class="bi bi-x-circle-fill mr-1" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+        </svg>
+        {{waringErr}}
+    </div>
+
+</div>
+
+
+
+<div class='card jh-card' style="margin: 0px 0px 10px 0px">
+    <h2><b>HỆ THỐNG KIỂM SOÁT TẬP TRUNG </b></h2>
+</div>
+<div style="position: relative;margin-bottom: 10px">
+
+    <p>Trang chủ >> Quản trị danh mục >> Danh mục điều kiện sản phẩm vay</p>
+
+</div>
+<div style="margin-top: 10px" class='card jh-card'>
+    <div class="row justify-content-between">
+        <div class='col-12 col-sm-4'>
+            <h3><b>Danh mục điều kiện sản phẩm vay</b></h3>
+        </div>
+        <!--     button   them moi-->
+        <div class='col-12 col-sm-5 text-right mr-0 mr-4'>
+            <button style="height: 35px;background-color:white!important;font-weight: bold" class='mat-raised-button btn cus-btn' (click)="openLg(content)">
+                <svg style="padding-bottom: 4px;font-weight: bold" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                </svg>
+                Import</button>
+            <button class='mat-raised-button mat-accent btn cus-btn' (click)="openXl(longContent)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-plus-circle-fill " viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                </svg>
+                Thêm mới
+            </button>
+        </div>
+        <!--   end  button   them moi-->
+    </div>
+</div>
+
+<div class='card jh-card table-custom' style="margin-top: 3px">
+
+    <!---------------        search            --------------->
+    <form [formGroup]="formSearch">
+        <div class='row'>
+            <div class='col-12 col-sm-5 row'>
+                <label class='col-5 col-form-label text-right'><b>Mã điều kiện</b></label>
+                <div class='col-7'>
+                    <input type='text' style="margin-left: 1px" class='form-control' formControlName="code" style="border-left: 1px solid #ced4da!important">
+                </div>
+            </div>
+            <div class='col-12 col-sm-5 row mt-2 mt-sm-0'>
+                <label class='col-5 col-form-label text-right'><b>Loại sản phẩm</b></label>
+                <div class="col-7">
+                    <ng-select
+                               placeholder="Tất cả"
+                               formControlName="productType">
+                        <ng-option value="">[Tất cả]</ng-option>
+                        <ng-option *ngFor="let value of productTypeList" [value]="value">{{value}}</ng-option>
+                    </ng-select>
+                </div>
+            </div>
+            <div class='col-12 col-sm-5 row mt-2'>
+                <label class='col-5 col-form-label text-right'><b>Trạng thái</b></label>
+                <div class='col-7'>
+                    <select style="padding-left: 2px" class="form-control col-12" formControlName="status">
+                        <option [selected]="formSearch.value.status == 0" value="0">[Tất cả]</option>
+                        <option [selected]="formSearch.value.status == 1" value="1">Đang hoạt động</option>
+                        <option [selected]="formSearch.value.status == 2" value="2">Dừng hoạt động</option>
+                    </select>
+                </div>
+            </div>
+            <div  class='col-12 col-sm-7 text-right mt-2'>
+                <button class='mat-raised-button mat-accent btn cus-btn' (click)="search()"
+                        style='padding-left: 0px;padding-right: 0px;width: 112px'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-search"
+                         viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    Tìm kiếm
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+    <!---------------    end    search            --------------->
+
+    <!---------------        table                --------------->
+    <div class='row mt-3  table-responsive'>
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr class="text-center" style="border: 0px">
+                <th scope="col">STT</th>
+                <th scope="col">Mã điều kiện</th>
+                <th scope="col">Loại sản phẩm</th>
+                <th scope="col">Tên chứng từ</th>
+                <th scope="col">Số ngày sau <br> ngày giải ngân<br> đầu tiên</th>
+                <th scope="col">Tần suất</th>
+                <th scope="col">Đơn vị tần suất</th>
+                <th scope="col">Ghi chú</th>
+                <th scope="col">Chế tài</th>
+                <th scope="col">Trạng thái</th>
+                <th scope="col">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody *ngIf="productConditionList">
+            <tr class="text-center" *ngFor="let item of productConditionList; index as i">
+                <td>{{this.size * this.indexPage + 1 + i}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.productType}}</td>
+                <td>{{item.slipCode}}</td>
+                <td>{{item.day}}</td>
+                <td>{{item.frequency}}</td>
+                <td>{{item.frequencyUnit}}</td>
+                <td>{{item.note}}</td>
+                <td>{{item.sanction}}</td>
+                <td *ngIf="item.status == 'ACTIVE'">Đang hoạt động</td>
+                <td *ngIf="item.status == 'INACTIVE'">Dừng hoạt động</td>
+                <td (click)="edit(item ,longContent)"> <span style="cursor: pointer">
+                        <fa-icon icon="pencil-alt"></fa-icon>
+                    </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-------------       phan trang        ------------>
+    <div *ngIf="page" class='row  justify-content-end'>
+        <select #selectSize (change)="pageItem(selectSize.value)" class="page-items mr-1" style='height: 30px'>
+            <option selected >5</option>
+            <option >10</option>
+            <option >15</option>
+        </select>
+        <p class='mt-1 mr-3'>dòng/trang. Tổng số {{page["totalElements"]}}. Hiển thị {{this.size * this.indexPage + 1}}
+            -{{countStt()}}. </p>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination mr-3 mr-sm-3 mr-md-4 pr-1">
+
+                <!--  to start-->
+                <li style="border-color: white">
+                    <a [ngClass]="indexPage == 0?'dis-a':''" (click)="preNextPage('start')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="font-size: 20px"
+                             fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            <path fill-rule="evenodd"
+                                  d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--   to pre -->
+                <li style="border-color: white" class="mr-3 ">
+                    <a [ngClass]="indexPage == 0?'dis-a':''" (click)="preNextPage('pre')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--   to next -->
+                <li>
+                    <a [ngClass]="(page['totalPages'] - 1) == indexPage?'dis-a':''" (click)="preNextPage('next')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!--   to end -->
+                <li style="border-color:  white">
+                    <a [ngClass]="(page['totalPages'] - 1) == indexPage?'dis-a':''" (click)="preNextPage('end')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" font-weight="bold" height="20"
+                             fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            <path fill-rule="evenodd"
+                                  d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-------------       phan trang        ------------>
+<!--     end   table                -->
+
+
+<!--------- modan ---------------->
+
+<ng-template #longContent let-modal>
+    <div class="modal-header">
+        <h5 class='modal-title' style="font-weight: bold">{{active}} điều kiện sản phẩm vay</h5>
+        <!--        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>-->
+        <a class="mr-2" (click)="modal.dismiss('Cross click')">
+            <fa-icon style="font-size: 25px" icon='times'></fa-icon>
+        </a>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="formProductCondition">
+            <div class='row mt-3'>
+                <div class='col-12 col-md-6 row'>
+                    <label  class='col-12 col-md-4 col-form-label'>Mã điều kiện(*)</label>
+                    <div class='col-12 col-md-8'>
+                        <input type='text' id="code" [attr.disabled]="active === 'Cập nhật'?'':null" (focus)="err001 = false" class='form-control'
+                               formControlName="code" placeholder="Nhập mã điều kiện" style="border-left: 1px solid #ced4da!important">
+                        <div class="text-danger"
+                             *ngIf="formProductCondition.controls.code.errors?.required && formProductCondition.controls.code.touched">
+                            Trường thông tin bắt buộc nhập
+                        </div>
+                        <div class="text-danger" *ngIf="!formProductCondition.controls.code.errors?.required &&
+                        formProductCondition.controls.code.errors?.pattern && formProductCondition.controls.code.touched">
+                            Mã điều kiện chỉ được nhập kí tự in hoa ,0-9, không quá 255 ký tự
+                        </div>
+                        <div class="text-danger" (focus)="err001" *ngIf="err001">
+                            Trường thông tin đã tồn tại
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-12 col-md-6  row'>
+                    <label class='col-12 col-md-4 col-form-label'>Tần suất(*)</label>
+                    <div class='col-12 col-md-8'>
+                        <input type='text' (focus)="err001 = false" class='form-control' formControlName="frequency" style="border-left: 1px solid #ced4da!important">
+                        <div class="text-danger" *ngIf="formProductCondition.controls.frequency.errors?.required && formProductCondition.controls.frequency.touched">
+                            Trường thông tin bắt buộc nhập
+                        </div>
+                        <div class="text-danger" *ngIf="!formProductCondition.controls.frequency.errors?.required &&
+                        formProductCondition.controls.frequency.errors?.pattern && formProductCondition.controls.frequency.touched">
+                            Trường thông tin chỉ cho nhập ký tự số và không vượt quá 10 ký tự
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-12 col-md-6 mt-0 mt-sm-3 row'>
+                    <label  class='col-12 col-md-4 col-form-label'>Loại sản
+                        phẩm</label>
+                    <div class='col-12 col-md-8'>
+                        <ng-select placeholder="Loại sản phẩm"
+                                   formControlName="productType">
+                            <ng-option *ngFor="let value of productTypeList"
+                                       [value]="value">{{value}}</ng-option>
+                        </ng-select>
+                        <div class="text-danger" *ngIf="!formProductCondition.value.productType
+                         && formProductCondition.controls.productType.touched">
+                            Trường thông tin bắt buộc nhập
+                        </div>
+                    </div>
+
+                </div>
+                <div class='col-12 col-md-6 mt-0 mt-sm-3 row'>
+                    <label  class='col-12 col-md-4 col-form-label'>Đơn vị tần
+                        suất</label>
+                    <div class='col-12 col-md-8'>
+                        <select style="padding-left: 2px" class="form-control col-12" formControlName="frequencyUnit" style="border-left: 1px solid #ced4da!important">
+                            <option value="DAY">Ngày</option>
+                            <option value="MONTH" >Tháng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class='col-12 col-md-6 mt-0 mt-sm-3 row'>
+                    <label class='col-12 col-md-4 col-form-label'>Số ngày giải ngân đầu tiên(*)</label>
+                    <div class='col-12 col-md-8'>
+                        <input type='text'  (focus)="err001 = false" class='form-control ' formControlName="day" placeholder="Nhập số ngày" style="border-left: 1px solid #ced4da!important">
+                        <div class="text-danger" *ngIf="formProductCondition.controls.day.errors?.required && formProductCondition.controls.day.touched">
+                            Trường thông tin bắt buộc nhập
+                        </div>
+                        <div class="text-danger" *ngIf="!formProductCondition.controls.day.errors?.required &&
+                        formProductCondition.controls.day.errors?.pattern && formProductCondition.controls.day.touched">
+                            Trường thông tin chỉ cho nhập ký tự số, lớn hơn 0 và không vượt quá 10 ký tự
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-12 col-md-6 mt-0 mt-sm-3 row'>
+                    <label  class='col-12 col-md-4 col-form-label'>Trạng thái</label>
+                    <div class='col-12 col-md-8'>
+                        <select style="padding-left: 2px" class="form-control col-12" formControlName="status">
+                            <option value="1">Hoạt động</option>
+                            <option value="2">Dừng hoạt động</option>
+                        </select>
+                    </div>
+                </div>
+
+            <div class='row col-12 mt-3'>
+                <label class='col-12 col-md-2 col-form-label'>Tên chứng từ (*)</label>
+                <div class='col-12 col-md-10'>
+                    <textarea  type='text' class='form-control' formControlName="slipCode" placeholder="Nhập tên chứng từ"></textarea>
+                    <div class="text-danger" *ngIf="formProductCondition.controls.slipCode.errors?.required
+                     && formProductCondition.controls.slipCode.touched">
+                        Trường thông tin bắt buộc nhập
+                    </div>
+                    <div class="text-danger" *ngIf="
+                                formProductCondition.controls.slipCode.errors?.maxlength && formProductCondition.controls.slipCode.touched ">
+                        Chế tài không quá 4000 ký tự
+                    </div>
+                </div>
+            </div>
+            <div class='row mt-3 col-12'>
+                <label class='col-12 col-md-2  col-form-label'>Chế tài</label>
+                <div class='col-12 col-md-10'>
+                    <textarea style="border-left: 1px solid #ced4da!important" type='text' class='form-control' formControlName="sanction" placeholder="Nhập chế tài"></textarea>
+                    <div class="text-danger" *ngIf="
+                                formProductCondition.controls.sanction.errors?.maxlength && formProductCondition.controls.sanction.touched ">
+                        Chế tài không quá 1000 ký tự
+                    </div>
+                </div>
+            </div>
+            <div class='row mt-3 col-12'>
+                <label class='col-12 col-md-2  col-form-label'>Ghi chú</label>
+                <div class='col-12 col-md-10'>
+                    <textarea  type='text' class='form-control' formControlName="note" placeholder="Nhập gi chú"></textarea>
+                    <div class="text-danger" *ngIf="
+                                formProductCondition.controls.note.errors?.maxlength && formProductCondition.controls.note.touched ">
+                        Ghi chú không quá 1000 ký tự
+                    </div>
+                </div>
+            </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer justify-content-center">
+<!--        !(formProductCondition.valid && formProductCondition.value.collateralType)-->
+        <button style="width: 135px!important;" [disabled]="!(formProductCondition.valid && formProductCondition.value.productType)"
+                (click)="saveProductCondition()" class='mat-raised-button mat-accent btn cus-btn ' >
+            <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle-fill mr-2" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+            {{active}}</button>
+        <button type='button' style="background-color:#f1f1f1!important" class=' mat-raised-button btn btn-custem' (click)="modal.close('Close click')">
+            Hủy
+        </button>
+    </div>
+</ng-template>
+
+<!------------end modal------------->
+<!------modal import----->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h5 class='modal-title' style="font-weight: bold">Import file</h5>
+        <a class="mr-2" (click)="modal.dismiss('Cross click')">
+            <fa-icon style="font-size: 25px" icon='times'></fa-icon>
+        </a>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="formImport">
+            <div class="card-body"><input (click)="valueExErr = null" formControlName="import" #inputVay id="importEx" style="display: none" (change)="onChange($event)" type="file">
+                <div class="form-group row mb-0"><label class="form-control-label col-12 col-sm-2 pt-2 required">Tên
+                    file</label>
+                    <div class="col-6 col-sm-7 col-sm-7 pr-0">
+                        <input (click)="inputVay.click()"  style="background-color: white;cursor: pointer;" formControlName="fileName" readonly class="form-control"
+                                                            type="text">
+                        <div class="pt-2">
+                            <a class="text-danger cursor-pointer"
+                               (click)="exportDemoEx()"><i class=""></i> Tải về
+                                file mẫu: Template_import_dkspvay.xlsx<br> </a>
+                            <a *ngIf="valueExErr"  class="text-danger cursor-pointer mt-4"
+                               (click)="exportErrEx()"><i class=""></i> Tải về
+                                file lỗi: import_dkspvay_error.xlsx <br></a>
+                        </div><!---->
+                    </div>
+
+                    <div class="col-6 col-sm-3 pl-2 pl-sm-5">
+                        <label for="importEx" class="btn btn-outline-danger w-100">
+                            <svg style="padding-bottom: 4px;font-weight: bold" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                            </svg>
+                            Chọn file...</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" style="background-color:#f1f1f1!important" class=' mat-raised-button btn btn-custem' (click)="modal.close('Close click')">Close</button>
+                <button [disabled]="!validateImport"  class='mat-raised-button mat-accent btn cus-btn' (click)="upload()">Save</button>
+            </div>
+        </form>
+    </div>
+
+</ng-template>

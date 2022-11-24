@@ -1,0 +1,59 @@
+@import "../../../content/template/loader";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.btn-custem{
+  background-color: #b8b8b8;
+  width: 100px;
+  color: black
+}
+.displayNone {
+  display: none;
+}
+.ng-invalid:not(form) {
+  border-left: 1px solid #ced4da;
+}
+.table-custom{
+  min-height: 400px;
+}
+
+.toart-cus{
+  position: fixed;
+  background: #21b321;
+  width: 260px;
+  left: 40%;
+  top: 10%;
+  height: 2em;
+  z-index: 100000 !important;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.toart-close {
+  position: fixed;
+  background: #21b321;
+  width: 300px;
+  left: 40%;
+  height: 2.2em;
+  z-index: 100000 !important;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dis-a{
+  pointer-events: none;
+  cursor: default;
+  color: #868686;
+}
+.cus-btn{
+  border: none;
+  width: 120px!important;
+  height: 35px!important;
+  background-color: #c6241e!important;
+}
+
